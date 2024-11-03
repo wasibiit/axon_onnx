@@ -49,7 +49,7 @@ defmodule AxonOnnx.Shared do
   end
 
   defn l2_norm(x, opts \\ []) do
-    x |> Nx.pow(2) |> Nx.sum(opts)
+    x |> Nx.pow(2) |> Nx.sum(opts) |> Nx.sqrt()
   end
 
   defn lrn(x, opts \\ []) do
